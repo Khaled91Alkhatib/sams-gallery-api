@@ -1,0 +1,3 @@
+INSERT INTO hats (id, name, description, image_path, price) VALUES (0, 'Summer Beach Sun Hat', 'Made of knitted lace ribbon with fabric material 100% cotton and sweatband inside helps to keep head cool.','sun-hat.jpg',34);
+INSERT INTO hats (id, name, description, image_path, price) VALUES (1, 'Queenfur Knit Slouchy Beanie', 'The cable-knit hat is made of 100% soft Acrylic, with faux fur pompom on the top of the hat which is thick and comfortable. Can make you feel warm and fashion.', 'Beanie.jpg', 19);
+INSERT INTO hats (id, name, description, image_path, price) VALUES (2, 'Bamboo Fashion Hat', 'The Bamboo Hat is pretied and requires no tying, just slip it on & off you go. Stretches to fit most head sizes.', 'bamboo-hat.jpg', 24);
