@@ -1,23 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const { Pool } = require('pg');
+const { client } = require('./db/index');
 const cors = require('cors');
 const app = express();
 
+// Once we require ENV, the files in the respective file will be excuted even though we wont call it within our code
+const ENV = require("./environment");
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
-
-const client = new Pool({
-  host: 'localhost',
-  user: 'sams',
-  database: 'samsgallery',
-  password: 123,
-  port: 5432
-});
-client.connect(function (err) {
-  if (err) throw err;
-  console.log("Client connected");
-});
 
 app.get('/api/hats', (req, res) => {
   const hatsGet = "SELECT * FROM hats";
