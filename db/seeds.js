@@ -10,7 +10,7 @@ const schemaQuery = fs.readFileSync("db/schema/01_hats.sql", {
 const seedQuery = fs.readFileSync("db/seeds/01_hats.sql", {
   encoding: 'utf-8'
 })
-console.log(seedQuery)
+// console.log(seedQuery)
 
 const client = new Pool({
   host: process.env.PGHOST,
@@ -29,9 +29,8 @@ client.connect(function (err) {
     console.log('schema res', res)
 
     client.query(seedQuery, (err, res) => {
-      // console.log(err)
-      console.log('seed res', res)
-  
+      console.log('error ',err)
+      // console.log('seed res', res)
       client.end()
     });
   })
