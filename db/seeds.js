@@ -4,10 +4,10 @@ const ENV = require("../environment");
 const { Pool } = require('pg');
 const fs = require("fs");
 
-const schemaQuery = fs.readFileSync("db/schema/01_hats.sql", {
+const schemaQuery = fs.readFileSync("db/schema/create-tables.sql", {
   encoding: 'utf-8'
 })
-const seedQuery = fs.readFileSync("db/seeds/01_hats.sql", {
+const seedQuery = fs.readFileSync("db/seeds/seed-tables.sql", {
   encoding: 'utf-8'
 })
 // console.log(seedQuery)
