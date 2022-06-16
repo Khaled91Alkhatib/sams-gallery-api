@@ -24,6 +24,13 @@ app.get('/api/belts', (req, res) => {
   })
 })
 
+app.get('/api/dresses', (req, res) => {
+  const dressesGet = "SELECT * FROM dresses";
+  client.query(dressesGet, (err, result) => {
+    res.send(result.rows);
+  })
+})
+
 app.listen(3002, () => {
   console.log(`Listening on port 3002.`);
 });
