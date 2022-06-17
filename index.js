@@ -21,15 +21,22 @@ app.get('/api/belts', (req, res) => {
   const beltsGet = "SELECT * FROM belts";
   client.query(beltsGet, (err, result) => {
     res.send(result.rows);
-  })
-})
+  });
+});
 
 app.get('/api/dresses', (req, res) => {
   const dressesGet = "SELECT * FROM dresses";
   client.query(dressesGet, (err, result) => {
     res.send(result.rows);
-  })
-})
+  });
+});
+
+app.get('/api/shoes', (req, res) => {
+  const shoesGet = "SELECT * FROM shoes";
+  client.query(shoesGet, (err, result) => {
+    res.send(result.rows);
+  });
+});
 
 app.listen(3002, () => {
   console.log(`Listening on port 3002.`);
